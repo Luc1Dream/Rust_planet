@@ -76,3 +76,21 @@
 //     }
 //     println!("values: {:#?}", values);
 // }
+//Exercise 4
+// Mục đích : giải quyết vấn đề ownership và borrowing ko dùng clone()
+// // Logic hiện tại đang sai (cho 1 vec -> đảo chiều vector đó)
+// fn main(){
+//     let mut a = vec![1,2,3,4,5];
+//     let c = test(&mut a);
+//     println!("{:?}",c);
+// }
+
+// pub fn test(a: &mut Vec<u8>) -> Vec<u8> {
+//     let mut b:Vec<u8>  = Vec::new();
+//     loop {
+//         if a.len() == 0 { break; }
+//         let d = a.pop().unwrap();
+//         b.push(d);
+//     }
+//     b
+// }
